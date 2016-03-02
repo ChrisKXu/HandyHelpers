@@ -4,7 +4,7 @@ install:
   - ps: scripts\envsetup.ps1
 version: 0.1.{build}
 cache:
-  - %UserProfile%\.dnx
+  - '%UserProfile%\.dnx'
 clone_depth: 1
 nuget:
   disable_publish_on_pr: true
