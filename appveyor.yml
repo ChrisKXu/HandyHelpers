@@ -21,7 +21,7 @@ deploy:
 - provider: NuGet
   server: https://www.myget.org/F/chriskxu/api/v2/package
   api_key:
-    secure: 2eXAuI3EbjRxVMoS/hLPu2W6gRROBj5UaSQkmcU/tUel8Gt1TuHtRMdTWSeeK3Wj
+    secure: LDoiXhx7WUTMTXjM5kWYWxQbcV5HzpZiMoakyuRn3yYUit0HW/TZVQT76bnvGk5C
   skip_symbols: true
   artifact: /.*\.nupkg/
 test_script:
