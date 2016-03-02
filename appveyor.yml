@@ -14,7 +14,6 @@ build:
 environment:
   DNX_BUILD_VERSION: $(APPVEYOR_BUILD_NUMBER)
 configuration:
-  - Debug
   - Release
 artifacts:
 - path: 'artifacts\bin\**\Release\*.nupkg'
@@ -25,6 +24,6 @@ deploy:
   api_key:
     secure: LDoiXhx7WUTMTXjM5kWYWxQbcV5HzpZiMoakyuRn3yYUit0HW/TZVQT76bnvGk5C
   skip_symbols: true
-  artifact: /.*\.nupkg/
+  artifact: 'artifacts\bin\**\Release\*.nupkg'
 test_script:
   - cmd: dnx -p HandyHelpers.Tests test
