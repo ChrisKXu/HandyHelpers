@@ -1,5 +1,6 @@
 init:
   - git config --global core.autocrlf true
+os: Visual Studio 2015
 install:
   - ps: scripts\envsetup.ps1
 version: 0.1.{build}
