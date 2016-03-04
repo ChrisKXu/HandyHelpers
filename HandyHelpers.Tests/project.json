@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0-*",
+  "version": "0.1.0-alpha-*",
   "description": "HandyHelpers.Tests Class Library",
   "authors": [ "Christopher Xu" ],
   "tags": [ "" ],
@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "FluentAssertions": "4.2.2",
-    "HandyHelpers": "0.1.0-*",
+    "HandyHelpers": "0.1.0-alpha-*",
     "Microsoft.CSharp": "4.0.1-beta-23516",
     "System.Collections": "4.0.11-beta-23516",
     "System.Linq": "4.0.1-beta-23516",
