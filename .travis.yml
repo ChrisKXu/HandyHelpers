@@ -22,7 +22,10 @@ os:
 osx_image: xcode7.1
 install:
 - scripts/envsetup.sh
-solution: "./HandyHelpers.sln"
+script:
+- cd HandyHelpers && dnu build
+- cd HandyHelpers.Tests && dnu build
+- dnx -p HandyHelpers.Tests test
 notifications:
   slack:
     secure: oCWT47gRUBE8ZuxryC5vE21vj1FJayrkvrWG5UC9uQAgvoVglq5p6Vq/Tfn+B8z8jKqfYIqdLDlByMew2fo/Nk50w+fB4e7zlBEAyWN861BUC4F+nvHi7zZtUdZzpir6XGhH1uxAv+cZ88czPdQXc2clN80UXwQ1fSKZeN8wXMsbn4GSlqEbqxjpg7oDvxXInPniFuicUhC5g46+B5B94sni4kOjkLmaqxpwPV1G/3gzFk53pplNFqew4fvMFsGJaGhywsadP9BU1n/1f7dpSEv7y6EnUr7QQ/uelao02pJe5nHvqwOUv/v/qUxtFn+cct5osudTqt/9poOo5xZ5ezw0WATeIHbxnJT3TkOl9X6cTZEA2aZM9xqG3ATB9+5goFfXj+vXeqv0NXLwtU99xKdokwF6wXLCAMk2It23ctEWL1jW7y4CBll70yX9oJEJplThOMAVpRKfxZu8KlcO0tEZyFsHGjs/3JR3OVNjqSR5atTbs9IZwMKRqN9KTZ+4O2tvHagzs6CbzB7xgo8myolM6dsyNVnb9AsnFy3HQEL4J1lOENrqA5vftV1lOqr6o9kc8ynPtbPe6e2P1VOMFT2mahxmZ+C62E0qBhw7MdiuFHPF4DzSvo5zOIzlDkbbXLj4iOSwNyD7ZVHKW/3oMVcO4Gw0If542OTWYfOljJk=
