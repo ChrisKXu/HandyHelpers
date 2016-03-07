@@ -5,16 +5,24 @@
   "tags": [ "" ],
   "projectUrl": "https://github.com/ChrisKXu/HandyHelpers.git",
   "licenseUrl": "",
-  "dependencies": {
-    "Microsoft.CSharp": "4.0.1-beta-23516",
-    "System.Collections": "4.0.11-beta-23516",
-    "System.Linq": "4.0.1-beta-23516",
-    "System.Net.Http": "4.0.0-beta-23019",
-    "System.Runtime": "4.0.21-beta-23516",
-    "System.Threading": "4.0.11-beta-23516"
-  },
   "frameworks": {
-    "dnx46": { },
-    "dnxcore50": { }
+    "net46": {
+      "frameworkAssemblies": {
+        "System.Threading.Tasks": ""
+      }
+    },
+    "netcore50": {
+      "dependencies": {
+        "System.Collections": "4.0.11-*",
+        "System.Globalization": "4.0.11-*",
+        "System.Linq": "4.0.0-*",
+        "System.Net.Primitives": "4.0.11-*",
+        "System.Runtime.Extensions": "4.0.11-*",
+        "System.Threading": "4.0.11-*",
+        "System.Threading.Tasks": "4.0.11-*",
+        "System.Threading.Thread": "4.0.0-*",
+        "System.Threading.ThreadPool": "4.0.10-*"
+      }
+    }
   }
 }
