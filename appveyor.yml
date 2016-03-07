@@ -27,3 +27,7 @@ deploy:
   artifact: /.*\.nupkg/
 test_script:
   - cmd: dnx -p HandyHelpers.Tests test
+notifications:
+  - provider: slack
+    incoming_webhook:
+      secure: V2x5I7lu0ePyR4J6fChwCynixksLWW5Z4+9aTMtY8ivLmCakXMpGiHKwJwFpYeXvN5sJvM8N0Up3nPoZZGnkil7rO2QvmMguRhoQKW1RJ2E=
