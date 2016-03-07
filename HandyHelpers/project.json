@@ -6,12 +6,12 @@
   "projectUrl": "https://github.com/ChrisKXu/HandyHelpers.git",
   "licenseUrl": "",
   "frameworks": {
-    "net46": {
+    "dnx451": {
       "frameworkAssemblies": {
-        "System.Threading.Tasks": ""
+        "System.Threading.Tasks": "4.0.0"
       }
     },
-    "netcore50": {
+    "dnxcore50": {
       "dependencies": {
         "System.Collections": "4.0.11-*",
         "System.Globalization": "4.0.11-*",
