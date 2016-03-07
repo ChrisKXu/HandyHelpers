@@ -6,3 +6,9 @@ dnvm install latest
 
 # Restore dependencies
 dnu restore
+
+# Build
+cd HandyHelpers && dnu build && cd ..
+cd HandyHelpers.Tests && dnu build && cd ..
+dnx -p HandyHelpers.Tests test
+
