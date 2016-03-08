@@ -6,14 +6,7 @@ addons:
     packages:
     - unzip
     - curl
-    - gettext
-    - libcurl4-openssl-dev
-    - libicu-dev
-    - libssl-dev
-    - libunwind8
     - zlib1g
-    - libicu-dev
-    - uuid-dev
 mono:
 - 4.0.5
 os:
