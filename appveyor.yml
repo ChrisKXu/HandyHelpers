@@ -1,16 +1,14 @@
 init:
   - git config --global core.autocrlf true
 os: Visual Studio 2015
-install:
-  - ps: scripts\envsetup.ps1
+build_script:
+  - ps: scripts\build.ps1
 version: 0.1.{build}
 cache:
   - '%UserProfile%\.dnx'
 clone_depth: 1
 nuget:
   disable_publish_on_pr: true
-build:
-  verbosity: normal
 environment:
   DNX_BUILD_VERSION: $(APPVEYOR_BUILD_NUMBER)
 configuration:
@@ -25,8 +23,7 @@ deploy:
     secure: LDoiXhx7WUTMTXjM5kWYWxQbcV5HzpZiMoakyuRn3yYUit0HW/TZVQT76bnvGk5C
   skip_symbols: true
   artifact: /.*\.nupkg/
-test_script:
-  - cmd: dnx -p HandyHelpers.Tests test
+test: off
 notifications:
   - provider: Slack
     incoming_webhook:

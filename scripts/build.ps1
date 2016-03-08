@@ -6,3 +6,13 @@ dnvm install latest -r clr -arch x86 -alias default
 
 # Restore dependencies
 dnu restore
+
+# Build
+dnu build ./HandyHelpers/project.json --quiet
+dnu build ./HandyHelpers.Tests/project.json --quiet
+
+# Test
+dnx -p HandyHelpers.Tests test
+
+# All clear
+Write-Host "All clear!"

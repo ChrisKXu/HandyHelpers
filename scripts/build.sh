@@ -8,6 +8,11 @@ dnvm upgrade -r mono
 dnu restore
 
 # Build
-cd HandyHelpers && dnu build && cd ..
-cd HandyHelpers.Tests && dnu build && cd ..
+dnu build ./HandyHelpers/project.json --quiet
+dnu build ./HandyHelpers.Tests/project.json --quiet
+
+# Test
 dnx -p HandyHelpers.Tests test
+
+# All clear
+echo "All clear!"
