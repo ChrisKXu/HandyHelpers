@@ -14,7 +14,7 @@ environment:
 configuration:
   - Release
 artifacts:
-- path: 'artifacts\bin\**\Release\*.nupkg'
+- path: 'artifacts\Release\*.nupkg'
   name: myget
 deploy:
 - provider: NuGet

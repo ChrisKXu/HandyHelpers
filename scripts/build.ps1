@@ -14,5 +14,8 @@ dnu build ./HandyHelpers.Tests/project.json --quiet
 # Test
 dnx -p HandyHelpers.Tests test
 
+# Pack
+dnu pack ./HandyHelpers/project.json --quiet --out ./artifacts --configuration Release
+
 # All clear
 Write-Host "All clear!"
