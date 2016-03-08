@@ -8,8 +8,7 @@ dnvm install latest -r clr -arch x86 -alias default
 dnu restore --quiet
 
 # Build
-dnu build ./HandyHelpers/project.json --quiet
-dnu build ./HandyHelpers.Tests/project.json --quiet
+dnu build ./HandyHelpers/project.json ./HandyHelpers.Tests/project.json --quiet
 
 # Test
 dnx -p HandyHelpers.Tests test
