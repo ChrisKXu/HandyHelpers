@@ -5,7 +5,7 @@ iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.co
 dnvm install latest -r clr -arch x86 -alias default
 
 # Restore dependencies
-dnu restore
+dnu restore --quiet
 
 # Build
 dnu build ./HandyHelpers/project.json --quiet

@@ -10,7 +10,7 @@ curl -sSL https://raw.githubusercontent.com/aspnet/Home/dev/dnvminstall.sh | DNX
 dnvm upgrade -r mono
 
 # Restore dependencies
-dnu restore
+dnu restore --quiet
 
 # Build
 dnu build ./HandyHelpers/project.json --quiet
