@@ -51,6 +51,8 @@ namespace HandyHelpers.Tests
 
         [Theory]
         [InlineData("", "", new string[] { })]
+        [InlineData("abc", "abc", new string[] { })]
+        [InlineData("{{foo}}", "{{foo}}", new string[] { })]
         [InlineData("{foo}", "{0}", new[] { "foo" })]
         [InlineData("a{foo}b", "a{0}b", new[] { "foo" })]
         [InlineData("a{foo}b{bar}c", "a{0}b{1}c", new[] { "foo", "bar" })]
@@ -79,6 +81,9 @@ namespace HandyHelpers.Tests
 
             StringFormatHelpers.ExtractObjectFromPropertyPath("foo", testObj).Should().Be(testObj.foo);
             StringFormatHelpers.ExtractObjectFromPropertyPath("nested.foo", testObj).Should().Be(testObj.nested.foo);
+
+            Action negative = () => StringFormatHelpers.ExtractObjectFromPropertyPath("bar", testObj);
+            negative.ShouldThrow<InvalidOperationException>();
         }
 
         private class A
@@ -109,6 +114,16 @@ namespace HandyHelpers.Tests
             StringFormatHelpers.ExtractObjectFromPropertyPath("A.Value", b).Should().Be(b.A.Value);
 
             StringFormatHelpers.ExtractObjectFromPropertyPath("A.B.A.B.A.Value", b).Should().Be(a.Value);
+        }
+
+        [Theory]
+        [InlineData("foo", "foo")]
+        [InlineData("foo:abc", "foo")]
+        [InlineData("foo,100", "foo")]
+        [InlineData("foo,100:abc", "foo")]
+        public void TestExtractIndexFromFormat(string template, string expectedIndex)
+        {
+            StringFormatHelpers.ExtractIndexFromFormat(template).Should().Be(expectedIndex);
         }
     }
 }
