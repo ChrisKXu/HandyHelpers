@@ -4,8 +4,6 @@ os: Visual Studio 2015
 build_script:
   - ps: scripts\build.ps1
 version: 0.1.{build}
-cache:
-  - '%UserProfile%\.dnx'
 clone_depth: 1
 nuget:
   disable_publish_on_pr: true

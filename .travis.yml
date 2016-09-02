@@ -7,6 +7,7 @@ addons:
     - unzip
     - curl
     - zlib1g
+    - dotnet-dev-1.0.0-preview2-003121
 mono:
 - 4.0.5
 os:
