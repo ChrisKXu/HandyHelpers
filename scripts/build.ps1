@@ -1,8 +1,8 @@
 # Restore dependencies
-dotnet restore --quiet
+dotnet restore
 
 # Build
-dotnet build ./HandyHelpers/project.json ./HandyHelpers.Tests/project.json --quiet
+dotnet build ./HandyHelpers/project.json ./HandyHelpers.Tests/project.json
 
 # Test
 dotnet -p HandyHelpers.Tests test
