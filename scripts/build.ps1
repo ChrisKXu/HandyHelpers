@@ -5,10 +5,10 @@ dotnet restore
 dotnet build ./HandyHelpers/project.json ./HandyHelpers.Tests/project.json
 
 # Test
-dotnet -p HandyHelpers.Tests test
+dotnet HandyHelpers.Tests test
 
 # Pack
-dotnet pack ./HandyHelpers/project.json --quiet --out ./artifacts --configuration Release
+dotnet pack ./HandyHelpers/project.json --out ./artifacts --configuration Release
 
 # All clear
 Write-Host "All clear!"
