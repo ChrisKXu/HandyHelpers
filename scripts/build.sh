@@ -7,7 +7,7 @@ dotnet restore
 dotnet build ./HandyHelpers/project.json ./HandyHelpers.Tests/project.json
 
 # Test
-dotnet HandyHelpers.Tests test
+dotnet test HandyHelpers.Tests
 
 # All clear
 echo "All clear!"
