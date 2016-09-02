@@ -8,7 +8,7 @@ dotnet build ./HandyHelpers/project.json ./HandyHelpers.Tests/project.json
 dotnet test HandyHelpers.Tests
 
 # Pack
-dotnet pack ./HandyHelpers/project.json --out ./artifacts --configuration Release
+# dotnet pack ./HandyHelpers/project.json --out ./artifacts --configuration Release
 
 # All clear
 Write-Host "All clear!"
